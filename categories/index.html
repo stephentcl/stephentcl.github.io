@@ -21,14 +21,16 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Stephen&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2021/11/index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://example.com/categories/index.html">
 <meta property="og:site_name" content="Stephen&#39;s Blog">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-17T07:34:56.000Z">
+<meta property="article:modified_time" content="2021-11-17T07:36:12.121Z">
 <meta property="article:author" content="Stephen Lin">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2021/11/">
+<link rel="canonical" href="http://example.com/categories/">
 
 
 <script id="page-configurations">
@@ -41,7 +43,8 @@
   };
 </script>
 
-  <title>Archive | Stephen's Blog</title>
+  <title>categories | Stephen's Blog
+</title>
   
 
 
@@ -148,57 +151,62 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content archive">
+          <div class="content page posts-expand">
             
 
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">categories
+</h1>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 1 post. Keep on posting.</span>
-      </div>
+
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-11-16T00:39:48+08:00"
-              content="2021-11-16">
-          11-16
-        </time>
+      
+      
+      <div class="post-body">
+          <div class="category-all-page">
+            <div class="category-all-title">
+              1 category in total
+            </div>
+            <div class="category-all">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9B%9C%E8%A8%98/">雜記</a><span class="category-list-count">1</span></li></ul>
+            </div>
+          </div>
+        
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/11/16/Hello/" itemprop="url">
-            <span itemprop="name">雜記</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+      
+      
     </div>
-  </div>
-  
-  
-  
+    
 
-  
-
+    
+    
+    
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -369,6 +377,26 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://example.com/categories/index.html";
+    this.page.identifier = "categories/index.html";
+    this.page.title = "categories";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://stephentcl.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>
