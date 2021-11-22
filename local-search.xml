@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>深度學習PyTorch基本操作</title>
+    <link href="/2021/11/22/PyTorch_Basic/"/>
+    <url>/2021/11/22/PyTorch_Basic/</url>
+    
+    <content type="html"><![CDATA[<h1 id="深度學習PyTorch基本操作"><a href="#深度學習PyTorch基本操作" class="headerlink" title="深度學習PyTorch基本操作 "></a>深度學習PyTorch基本操作 <span id="more"></span></h1><hr><p>大家都知道<strong>深度學習</strong>常用的兩個框架：</p><ul><li>PyTorch</li><li>Tensorflow<br>這兩個比較起來，Tensorflow相對好上手，不過兩者都有各自的愛好者擁戴。那今天就先來介紹一下PyTorch的基本操作吧。</li></ul><hr><p>所謂張量Tensor就數學的定義來看，0階的張量就是純量、1階的張量就是向量、二階的張量就是矩陣也可以為二維的向量。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br>z = torch.Tensor(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)  <span class="hljs-comment">##後面引數為其維度</span><br>z   <span class="hljs-comment">##用多維的list去達成張量</span><br></code></pre></td></tr></table></figure><p>其輸出結果：<br>tensor([[2.8339e+01, 3.0683e-41, 7.0065e-44, 6.8664e-44, 6.3058e-44],<br>        [6.7262e-44, 7.9874e-44, 6.3058e-44, 7.0065e-44, 7.8473e-44],<br>        [1.1771e-43, 6.8664e-44, 7.0065e-44, 8.1275e-44, 7.0065e-44],<br>        [7.8473e-44, 8.1275e-44, 6.7262e-44, 7.7071e-44, 6.4460e-44]])</p><hr><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#dtype為data type可以印出資料型態 </span><br><span class="hljs-comment">#裡面的.float32代表他的浮點數用float32做計算</span><br><span class="hljs-comment">#.dtype可以用來驗證兩個tensor有沒有一樣</span><br>z.dtype<br></code></pre></td></tr></table></figure><p>其輸出結果為：<br>torch.float32</p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>雜記</title>
     <link href="/2021/11/16/Hello/"/>
     <url>/2021/11/16/Hello/</url>
@@ -14,25 +33,6 @@
     <categories>
       
       <category>雜記</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>深度學習PyTorch基本操作</title>
-    <link href="/2021/11/16/PyTorch_Basic/"/>
-    <url>/2021/11/16/PyTorch_Basic/</url>
-    
-    <content type="html"><![CDATA[<h1 id="深度學習PyTorch基本操作"><a href="#深度學習PyTorch基本操作" class="headerlink" title="深度學習PyTorch基本操作 "></a>深度學習PyTorch基本操作 <span id="more"></span></h1><hr><p>大家都知道<strong>深度學習</strong>常用的兩個框架：</p><ul><li>PyTorch</li><li>Tensorflow<br>這兩個比較起來，Tensorflow相對好上手，不過兩者都有各自的愛好者擁戴。那今天就先來介紹一下PyTorch的基本操作吧。</li></ul><hr><p>所謂張量Tensor就數學的定義來看，0階的張量就是純量、1階的張量就是向量、二階的張量就是矩陣也可以為二維的向量。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br>z = torch.Tensor(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)  <span class="hljs-comment">##後面引數為其維度</span><br>z   <span class="hljs-comment">##用多維的list去達成張量</span><br></code></pre></td></tr></table></figure><p>其輸出結果：<br>tensor([[2.8339e+01, 3.0683e-41, 7.0065e-44, 6.8664e-44, 6.3058e-44],<br>        [6.7262e-44, 7.9874e-44, 6.3058e-44, 7.0065e-44, 7.8473e-44],<br>        [1.1771e-43, 6.8664e-44, 7.0065e-44, 8.1275e-44, 7.0065e-44],<br>        [7.8473e-44, 8.1275e-44, 6.7262e-44, 7.7071e-44, 6.4460e-44]])</p><hr><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#dtype為data type可以印出資料型態 </span><br><span class="hljs-comment">#裡面的.float32代表他的浮點數用float32做計算</span><br><span class="hljs-comment">#.dtype可以用來驗證兩個tensor有沒有一樣</span><br>z.dtype<br></code></pre></td></tr></table></figure><p>其輸出結果為：<br>torch.float32</p><hr>]]></content>
-    
-    
-    <categories>
-      
-      <category>Deep Learning</category>
       
     </categories>
     
