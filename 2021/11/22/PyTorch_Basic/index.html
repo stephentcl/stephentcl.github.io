@@ -20,14 +20,18 @@
   <meta name="description" content="深度學習PyTorch基本操作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度學習PyTorch基本操作">
-<meta property="og:url" content="http://example.com/2021/11/16/PyTorch_Basic/index.html">
+<meta property="og:url" content="http://example.com/2021/11/22/PyTorch_Basic/index.html">
 <meta property="og:site_name" content="Stephen&#39;s Blog">
 <meta property="og:description" content="深度學習PyTorch基本操作">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-15T16:39:48.000Z">
-<meta property="article:modified_time" content="2021-11-22T09:06:50.391Z">
+<meta property="og:image" content="https://i.imgur.com/lv6lEcO.png">
+<meta property="og:image" content="https://i.imgur.com/SuxiwXP.png">
+<meta property="og:image" content="https://i.imgur.com/kt3r4z8.png">
+<meta property="article:published_time" content="2021-11-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-22T09:40:47.897Z">
 <meta property="article:author" content="Stephen Lin">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/lv6lEcO.png">
   
   <title>深度學習PyTorch基本操作 - Stephen&#39;s Blog</title>
 
@@ -180,8 +184,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-11-16 00:39" pubdate>
-        November 16, 2021 am
+      <time datetime="2021-11-22 00:00" pubdate>
+        November 22, 2021 am
       </time>
     </span>
   
@@ -191,7 +195,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.2k 字
     </span>
   
 
@@ -200,7 +204,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3 分鐘
+      4 分鐘
     </span>
   
 
@@ -267,6 +271,15 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">b.dtype<br></code></pre></td></tr></table></figure>
 <p>其輸出結果：<br>torch.float32</p>
 <hr>
+<h2 id="3-整數的Tensor宣告方法"><a href="#3-整數的Tensor宣告方法" class="headerlink" title="3.整數的Tensor宣告方法"></a>3.整數的Tensor宣告方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a = torch.IntTensor(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)  <span class="hljs-comment">##宣告為整數的Tensor</span><br>a<br></code></pre></td></tr></table></figure>
+<p>其輸出結果：<br><img src="https://i.imgur.com/lv6lEcO.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">b = torch.IntTensor([[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]])<br>b<br></code></pre></td></tr></table></figure>
+<p>其輸出結果：<br><img src="https://i.imgur.com/SuxiwXP.png" srcset="/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="4-浮點數的Tensor跟整數的Tensor相加結果會如何"><a href="#4-浮點數的Tensor跟整數的Tensor相加結果會如何" class="headerlink" title="4.浮點數的Tensor跟整數的Tensor相加結果會如何?"></a>4.浮點數的Tensor跟整數的Tensor相加結果會如何?</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">y = a + z<br>y<br></code></pre></td></tr></table></figure>
+<p>其輸出結果：<br><img src="https://i.imgur.com/kt3r4z8.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">y.dtype<br></code></pre></td></tr></table></figure>
+<p>其輸出結果：<br>torch.float32</p>
 
             </div>
             <hr>
@@ -288,15 +301,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/11/16/Hello/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">雜記</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/11/16/Hello/">
+                        <span class="hidden-mobile">雜記</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
