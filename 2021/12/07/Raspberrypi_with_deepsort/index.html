@@ -17,12 +17,12 @@
   <meta name="description" content="">
   <meta name="author" content="Stephen Lin">
   <meta name="keywords" content="">
-  <meta name="description" content="樹莓派 安裝 Yolov4 + DeepSort由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有其他AI應用又或是需要加快速度也可以考慮使用nvdia的nano jetson有cuda可以使用。 一、樹莓派環境建置教學1. 樹莓派規格表我手邊的樹莓派是Raspberry pi 4B，8 Gb的Ram，32Gb的記憶卡參考資料:連結 2. 燒入img檔進入SD卡(1) 首先插">
+  <meta name="description" content="樹莓派 安裝 Yolov4 + DeepSort在深度學習有一個很重要的應用就是目標檢測，是一個很常見的Topic，其中YOLO這個目標檢測的模型佔有一個很重要的地位，講到目標檢測就會想到要用YOLO，像是下面這個連結所顯示的那樣，將人和物進行分類，其實細部原理只是對每一個frame進行深度學習的分類及labeling。   由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Raspberry pi上執行Yolov4和DeepSort">
 <meta property="og:url" content="http://example.com/2021/12/07/Raspberrypi_with_deepsort/index.html">
 <meta property="og:site_name" content="Stephen&#39;s Blog">
-<meta property="og:description" content="樹莓派 安裝 Yolov4 + DeepSort由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有其他AI應用又或是需要加快速度也可以考慮使用nvdia的nano jetson有cuda可以使用。 一、樹莓派環境建置教學1. 樹莓派規格表我手邊的樹莓派是Raspberry pi 4B，8 Gb的Ram，32Gb的記憶卡參考資料:連結 2. 燒入img檔進入SD卡(1) 首先插">
+<meta property="og:description" content="樹莓派 安裝 Yolov4 + DeepSort在深度學習有一個很重要的應用就是目標檢測，是一個很常見的Topic，其中YOLO這個目標檢測的模型佔有一個很重要的地位，講到目標檢測就會想到要用YOLO，像是下面這個連結所顯示的那樣，將人和物進行分類，其實細部原理只是對每一個frame進行深度學習的分類及labeling。   由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/mG2H4GJ.png">
 <meta property="og:image" content="https://i.imgur.com/1vDt2Cc.png">
@@ -64,7 +64,7 @@
 <meta property="og:image" content="https://i.imgur.com/7KQXsIr.png">
 <meta property="og:image" content="https://i.imgur.com/Umf6pY0.png">
 <meta property="article:published_time" content="2021-12-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-07T08:37:23.483Z">
+<meta property="article:modified_time" content="2021-12-14T06:21:09.391Z">
 <meta property="article:author" content="Stephen Lin">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://i.imgur.com/mG2H4GJ.png">
@@ -231,7 +231,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.5k 字
+      6.6k 字
     </span>
   
 
@@ -240,7 +240,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20 分鐘
+      21 分鐘
     </span>
   
 
@@ -280,7 +280,10 @@
             <h1 style="display: none">在Raspberry pi上執行Yolov4和DeepSort</h1>
             
             <div class="markdown-body">
-              <h1 id="樹莓派-安裝-Yolov4-DeepSort"><a href="#樹莓派-安裝-Yolov4-DeepSort" class="headerlink" title="樹莓派 安裝 Yolov4 + DeepSort"></a>樹莓派 安裝 Yolov4 + DeepSort</h1><p>由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有其他AI應用又或是需要加快速度也可以考慮使用nvdia的nano jetson有cuda可以使用。</p>
+              <h1 id="樹莓派-安裝-Yolov4-DeepSort"><a href="#樹莓派-安裝-Yolov4-DeepSort" class="headerlink" title="樹莓派 安裝 Yolov4 + DeepSort"></a>樹莓派 安裝 Yolov4 + DeepSort</h1><p>在深度學習有一個很重要的應用就是目標檢測，是一個很常見的Topic，其中YOLO這個目標檢測的模型佔有一個很重要的地位，講到目標檢測就會想到要用YOLO，像是下面這個連結所顯示的那樣，將人和物進行分類，其實細部原理只是對每一個frame進行深度學習的分類及labeling。</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/Uds1nF4UZ4w" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有其他AI應用又或是需要加快速度也可以考慮使用nvdia的nano jetson有cuda可以使用。</p>
 <h2 id="一、樹莓派環境建置教學"><a href="#一、樹莓派環境建置教學" class="headerlink" title="一、樹莓派環境建置教學"></a>一、樹莓派環境建置教學</h2><h2 id="1-樹莓派規格表"><a href="#1-樹莓派規格表" class="headerlink" title="1. 樹莓派規格表"></a>1. 樹莓派規格表</h2><p>我手邊的樹莓派是Raspberry pi 4B，8 Gb的Ram，32Gb的記憶卡<br>參考資料:<a target="_blank" rel="noopener" href="https://https//manuals.plus/m/ce6cc7107a28b3d5b6c944129b2fc7b4ed80ba77dcd9d2693bd9040a63bb768e_optim.pdf">連結</a></p>
 <h2 id="2-燒入img檔進入SD卡"><a href="#2-燒入img檔進入SD卡" class="headerlink" title="2. 燒入img檔進入SD卡"></a>2. 燒入img檔進入SD卡</h2><h3 id="1-首先插入SD卡，並且下載Raspberry-Pi-OS的image檔安裝程式，往下滑可以看到下載連結，選擇自己的電腦環境下載"><a href="#1-首先插入SD卡，並且下載Raspberry-Pi-OS的image檔安裝程式，往下滑可以看到下載連結，選擇自己的電腦環境下載" class="headerlink" title="(1) 首先插入SD卡，並且下載Raspberry Pi OS的image檔安裝程式，往下滑可以看到下載連結，選擇自己的電腦環境下載"></a>(1) 首先插入SD卡，並且下載<a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/">Raspberry Pi OS的image檔安裝程式</a>，往下滑可以看到下載連結，選擇自己的電腦環境下載</h3><p><img src="https://i.imgur.com/mG2H4GJ.png" srcset="/img/loading.gif" lazyload><br><img src="https://i.imgur.com/1vDt2Cc.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="2-下載OS的img檔-2021-05-07-raspios-buster-arm64-zip"><a href="#2-下載OS的img檔-2021-05-07-raspios-buster-arm64-zip" class="headerlink" title="(2) 下載OS的img檔:2021-05-07-raspios-buster-arm64.zip"></a>(2) 下載OS的img檔:<a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-05-28/2021-05-07-raspios-buster-arm64.zip">2021-05-07-raspios-buster-arm64.zip</a></h3><p>實測32位元的許多套件裝不起來，另外64位元也測過目前最新版Python3.9的版本也有一些套件不相容。</p>
@@ -317,7 +320,7 @@
 <h3 id="3-執行free-m及htop指令確認Swap空間有多大"><a href="#3-執行free-m及htop指令確認Swap空間有多大" class="headerlink" title="(3) 執行free -m及htop指令確認Swap空間有多大"></a>(3) 執行free -m及htop指令確認Swap空間有多大</h3><p>下圖為參考網站之圖片<br><img src="https://i.imgur.com/iisGct8.png" srcset="/img/loading.gif" lazyload><br>而我手邊的樹莓派測試如下圖：<br><img src="https://i.imgur.com/i9e4Fr9.png" srcset="/img/loading.gif" lazyload><br><img src="https://i.imgur.com/Q1hNwpV.png" srcset="/img/loading.gif" lazyload><br>基本上容量一定要大於3G以上好像後續安裝其他套件才不會有問題，由於我空間很大後續沒遇到一些memory不夠的問題</p>
 <h2 id="5-更新套件資料"><a href="#5-更新套件資料" class="headerlink" title="5. 更新套件資料"></a>5. 更新套件資料</h2><p>輸入以下指令更新OS</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># refresh your OS</span><br>$ sudo apt-<span class="hljs-builtin-name">get</span> update<br>$ sudo apt-<span class="hljs-builtin-name">get</span> upgrade<br></code></pre></td></tr></table></figure>
-<hr>
+
 <h1 id="二、YoloV4及Deep-Sort相關環境安裝教學"><a href="#二、YoloV4及Deep-Sort相關環境安裝教學" class="headerlink" title="二、YoloV4及Deep Sort相關環境安裝教學"></a>二、YoloV4及Deep Sort相關環境安裝教學</h1><p>安裝Yolo以及Deep Sort總共有以下幾個套件需要安裝：</p>
 <ul>
 <li>Pytorch</li>
@@ -343,7 +346,6 @@
 <h2 id="4-安裝OpenCV"><a href="#4-安裝OpenCV" class="headerlink" title="4. 安裝OpenCV"></a>4. 安裝OpenCV</h2><p>進行OpenCV的安裝</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">$ sudo apt <span class="hljs-keyword">install</span> python3-opencv<br></code></pre></td></tr></table></figure>
 <p>安裝完成後輸入以下指令進行測試<br><img src="https://i.imgur.com/DI7WoVv.png" srcset="/img/loading.gif" lazyload></p>
-<hr>
 <h1 id="三、開始執行DeepSort相關程式開發測試"><a href="#三、開始執行DeepSort相關程式開發測試" class="headerlink" title="三、開始執行DeepSort相關程式開發測試"></a>三、開始執行DeepSort相關程式開發測試</h1><p>(注意一下在SSH下指令好像會出現Sever connect error，請在VNC下)</p>
 <h2 id="1-下載DeepSort相關資料"><a href="#1-下載DeepSort相關資料" class="headerlink" title="1. 下載DeepSort相關資料"></a>1. 下載DeepSort相關資料</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/theAIGuysCode/y</span>olov4-deepsort<br>$ cd yolov4-deepsort/<br></code></pre></td></tr></table></figure>
 <h2 id="2-修改需要安裝套件之資訊"><a href="#2-修改需要安裝套件之資訊" class="headerlink" title="2. 修改需要安裝套件之資訊"></a>2. 修改需要安裝套件之資訊</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>sudo nano requirements.txt<br></code></pre></td></tr></table></figure>
@@ -369,7 +371,6 @@
 <h2 id="8-Running-DeepSort-with-YOLOv4"><a href="#8-Running-DeepSort-with-YOLOv4" class="headerlink" title="8. Running DeepSort with YOLOv4"></a>8. Running DeepSort with YOLOv4</h2><p>開始執行DeepSort，此時會將每一個FPS進行目標的標記，不過由於是full的yolov4所以執行需要花一段時間，若是想要加快速度其實可以換成yolov4-tiny版本的權重，但是會犧牲一點準確性。</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># run DeepSort with YOLOv4 Object Detections as backbone (enable --info flag to see info about tracked objects)</span><br>$ python3 object_tracker.py <span class="hljs-params">--video</span> <span class="hljs-string">./data/video/test.mp4</span> <span class="hljs-params">--output</span> <span class="hljs-string">./outputs/tracker.avi</span> <span class="hljs-params">--model</span> yolov4 <span class="hljs-params">--dont_show</span> <span class="hljs-params">--info</span><br></code></pre></td></tr></table></figure>
 <p>完成後可以在ouput資料夾內看到tracker.avi檔案<br><img src="https://i.imgur.com/7KQXsIr.png" srcset="/img/loading.gif" lazyload><br>可以看到影片檔已進行Deep Sort<br><img src="https://i.imgur.com/Umf6pY0.png" srcset="/img/loading.gif" lazyload></p>
-<hr>
 <h1 id="四、參考資料"><a href="#四、參考資料" class="headerlink" title="四、參考資料"></a>四、參考資料</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://qengineering.eu/install-raspberry-64-os.html">64位元OS安裝</a></li>
 <li><a target="_blank" rel="noopener" href="https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html">安裝Pytorch跟TorchVision</a></li>
