@@ -64,7 +64,7 @@
 <meta property="og:image" content="https://i.imgur.com/7KQXsIr.png">
 <meta property="og:image" content="https://i.imgur.com/Umf6pY0.png">
 <meta property="article:published_time" content="2021-12-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-14T06:21:09.391Z">
+<meta property="article:modified_time" content="2021-12-14T06:27:43.745Z">
 <meta property="article:author" content="Stephen Lin">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://i.imgur.com/mG2H4GJ.png">
@@ -231,7 +231,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.6k 字
+      6.8k 字
     </span>
   
 
@@ -285,6 +285,7 @@
 
 <p>由於樹莓派沒有cuda可以使用，因此在訓練的速度就會稍慢一些，若是將來有其他AI應用又或是需要加快速度也可以考慮使用nvdia的nano jetson有cuda可以使用。</p>
 <h2 id="一、樹莓派環境建置教學"><a href="#一、樹莓派環境建置教學" class="headerlink" title="一、樹莓派環境建置教學"></a>一、樹莓派環境建置教學</h2><h2 id="1-樹莓派規格表"><a href="#1-樹莓派規格表" class="headerlink" title="1. 樹莓派規格表"></a>1. 樹莓派規格表</h2><p>我手邊的樹莓派是Raspberry pi 4B，8 Gb的Ram，32Gb的記憶卡<br>參考資料:<a target="_blank" rel="noopener" href="https://https//manuals.plus/m/ce6cc7107a28b3d5b6c944129b2fc7b4ed80ba77dcd9d2693bd9040a63bb768e_optim.pdf">連結</a></p>
+<p>樹莓派其實是一個Linux系統，不同常見的Ubuntu等等X86架構，Raspberry pi是ARM based，所以所有的安裝套件都要裝人家編譯過的又或是要拿source code來在樹莓派上進行編譯，因此要安裝Yolo+DeepSort就得花一點功夫，接下來安裝的系統為64 bits的OS，而非官網上給的32 bits OS，由於發現許多的套件只有找到64位元版本的，因此裝上64位元的系統進行環境設定。</p>
 <h2 id="2-燒入img檔進入SD卡"><a href="#2-燒入img檔進入SD卡" class="headerlink" title="2. 燒入img檔進入SD卡"></a>2. 燒入img檔進入SD卡</h2><h3 id="1-首先插入SD卡，並且下載Raspberry-Pi-OS的image檔安裝程式，往下滑可以看到下載連結，選擇自己的電腦環境下載"><a href="#1-首先插入SD卡，並且下載Raspberry-Pi-OS的image檔安裝程式，往下滑可以看到下載連結，選擇自己的電腦環境下載" class="headerlink" title="(1) 首先插入SD卡，並且下載Raspberry Pi OS的image檔安裝程式，往下滑可以看到下載連結，選擇自己的電腦環境下載"></a>(1) 首先插入SD卡，並且下載<a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/">Raspberry Pi OS的image檔安裝程式</a>，往下滑可以看到下載連結，選擇自己的電腦環境下載</h3><p><img src="https://i.imgur.com/mG2H4GJ.png" srcset="/img/loading.gif" lazyload><br><img src="https://i.imgur.com/1vDt2Cc.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="2-下載OS的img檔-2021-05-07-raspios-buster-arm64-zip"><a href="#2-下載OS的img檔-2021-05-07-raspios-buster-arm64-zip" class="headerlink" title="(2) 下載OS的img檔:2021-05-07-raspios-buster-arm64.zip"></a>(2) 下載OS的img檔:<a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-05-28/2021-05-07-raspios-buster-arm64.zip">2021-05-07-raspios-buster-arm64.zip</a></h3><p>實測32位元的許多套件裝不起來，另外64位元也測過目前最新版Python3.9的版本也有一些套件不相容。</p>
 <h3 id="2-開啟imager-1-6-2-exe檔案，並且執行安裝"><a href="#2-開啟imager-1-6-2-exe檔案，並且執行安裝" class="headerlink" title="(2) 開啟imager_1.6.2.exe檔案，並且執行安裝"></a>(2) 開啟imager_1.6.2.exe檔案，並且執行安裝</h3><p><img src="https://i.imgur.com/joBqDyz.png" srcset="/img/loading.gif" lazyload></p>
